@@ -7,6 +7,7 @@
     <meta name="description"
         content="This is my home page, and all information here is about me and this Home page is for education purposes only">
     <meta name="author" content="Rene Gregory Manato">
+    <link rel="stylesheet" href="styles/rafting.css">
     <title> Rene Gregory Manato| WDD 130</title>
 </head>
 
@@ -15,28 +16,56 @@
         <nav>
             <a href="#">Home</a>
             <a href="wwr/">Rafting Website</a>
+            <ul>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <h1>Rene Gregory Manaro | WDD 130</h1>
-        <img src="images/profile.jpg" alt="Hello, my name is Rene Gregory Manato" width="200">
-        <p>Hello! My name is Rene Gregory Manato and I am from Rodriguez Rizal, Philippines
-            and I love watching anime and playing computer games, as a child I have always like
-            to create my own video games and thinker with computer.
-        </p>
+         <!-- Hero Section -->
+         <section class="hero">
+            <img src="images/raftingbanner.jpeg" alt="Rafting Adventure">
+            <div class="hero-text">
+                <h1>Welcome to Splashwater Rafting!</h1>
+                <p>Adventure Awaits</p>
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter">
+            <h2>Join Our Adventure Newsletter</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="call-to-action">
+            <h2>Ready for an Adventure?</h2>
+            <a href="trips.html" class="btn">Explore Our Trips</a>
+        </section>
+
+        <!-- Grid Layout -->
+        <section class="info-grid">
+            <div class="grid-item">
+                <img src="images/rafting1.jpeg" alt="Rafting Experience">
+                <p>Experience the thrill of navigating white water rapids!</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/rafting2.jpeg" alt="Team Adventure">
+                <p>Perfect for friends, families, and team-building events.</p>
+            </div>
+        </section>
     </main>
-    <aside>
-        <h2>Rodriguez, Rizal</h2>
-        <img src="images/Rodriguez-Rizal.jpg" alt=" This is where I am from" width="200">
-        <p>This place is full of mountains and is a great place to hike,bike and climb mountains. Although many parts of
-            the mountain is being destroyed due to quarry and illegal logging this place is still beautiful and
-            majestic.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae, tenetu.Lorem, ipsum dolor sit
-            amet consectetur adipisicing elit. Molestiae, tenetu
-        </p>
-    </aside>
+
     <footer>
-        <p>🚗2025 🍕Rene Gregory Manato🍕 Rodriguez, Philippines</p>
+        <p>&copy; Brigham Young University-Idaho | All rights reserved</p>
     </footer>
 </body>
-
 </html>
