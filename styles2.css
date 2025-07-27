@@ -1,0 +1,304 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #222;
+      line-height: 1.5;
+  }
+
+  a {
+      text-decoration: none;
+      color: inherit;
+  }
+
+  /* Container max width */
+  .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  }
+
+  /* Header */
+  header {
+      background-color: #b0a7f2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+  }
+
+  /* Logo placeholder */
+  .logo {
+      width: 110px;
+      height: 60px;
+      background-color: #d3cfff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #6258e8;
+      border-radius: 4px;
+      user-select: none;
+      font-size: 18px;
+  }
+
+  nav {
+      display: flex;
+      gap: 16px;
+  }
+
+  nav a {
+      background: white;
+      color: #333;
+      padding: 8px 15px;
+      border-radius: 4px;
+      font-weight: 600;
+      box-shadow: 0 1px 4px rgb(0 0 0 / 0.1);
+      transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav a:hover,
+  nav a:focus {
+      background-color: #5449c0;
+      color: white;
+  }
+
+  /* Main content wrapper */
+  main {
+      margin-top: 25px;
+      margin-bottom: 30px;
+  }
+
+  /* White Water Rafting Section */
+  .rafting-section {
+      border: 1px solid #aaa;
+      padding: 20px 25px;
+      margin-bottom: 30px;
+      position: relative;
+  }
+
+  .rafting-section h1 {
+      font-weight: 600;
+      font-size: 24px;
+      margin-bottom: 15px;
+      text-align: center;
+  }
+
+  .rafting-content {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+  }
+
+  .rafting-text {
+      flex: 1 1 70%;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.6;
+  }
+
+  .rafting-image {
+      flex: 0 0 120px;
+      background-color: #a9d5f9;
+      border-radius: 4px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .rafting-image img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+  }
+
+  /* History section */
+  .history-section {
+      border: 1px solid #aaa;
+      padding: 20px 20px 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 20px;
+      margin-bottom: 30px;
+      position: relative;
+  }
+
+  .history-section h2 {
+      position: absolute;
+      top: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      padding: 0 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: #222;
+      user-select: none;
+  }
+
+  .history-text {
+      flex: 1 1 40%;
+      font-size: 14px;
+      color: #333;
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .history-graphic {
+      flex: 0 0 180px;
+      background-color: #372e8c;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .history-graphic img {
+      filter: brightness(0) invert(1);
+      width: 90px;
+      height: 60px;
+      object-fit: contain;
+  }
+
+  /* Adventure awaits section */
+  .adventure-section {
+      border: 1px solid #aaa;
+      padding: 20px 20px 25px 20px;
+  }
+
+  .adventure-section h3 {
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .adventure-gallery {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+  }
+
+  .adventure-item {
+      flex: 1 1 18%;
+      min-width: 110px;
+      text-align: center;
+      user-select: none;
+  }
+
+  .adventure-item img {
+      width: 100%;
+      height: 100px;
+      border-radius: 4px;
+      background-color: #ddd;
+      object-fit: cover;
+      margin-bottom: 7px;
+  }
+
+  .adventure-caption {
+      font-size: 13px;
+      color: #444;
+  }
+
+  /* Footer */
+  footer {
+      background-color: #b0a7f2;
+      color: #2e2a5d;
+      padding: 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+  }
+
+  .social-icons {
+      display: flex;
+      gap: 15px;
+  }
+
+  .social-icon {
+      width: 30px;
+      height: 30px;
+      border: 1.5px solid #2e2a5d;
+      border-radius: 4px;
+      background-color: #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .social-icon:hover,
+  .social-icon:focus {
+      border-color: #1b1464;
+      background-color: #6c63ff;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 900px) {
+      .rafting-content {
+          flex-direction: column;
+      }
+
+      .rafting-image {
+          margin-top: 12px;
+          align-self: center;
+      }
+  }
+
+  @media (max-width: 620px) {
+      .history-section {
+          flex-direction: column;
+          padding-top: 40px;
+          height: auto;
+      }
+
+      .history-section h2 {
+          position: static;
+          transform: none;
+          text-align: center;
+          margin-bottom: 15px;
+      }
+
+      .history-text {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 15px;
+      }
+
+      .history-graphic {
+          margin: 0 auto;
+      }
+
+      .adventure-gallery {
+          justify-content: center;
+      }
+
+      .adventure-item {
+          flex: 1 1 40%;
+          max-width: 160px;
+      }
+
+      footer {
+          flex-direction: column;
+          gap: 15px;
+          text-align: center;
+      }
+
+      .social-icons {
+          justify-content: center;
+      }
+  }
