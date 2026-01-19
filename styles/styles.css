@@ -26,23 +26,6 @@ header {
     font-size: 16px;
 }
 
-.logo {
-    width: 50px;
-    height: 50px;
-    background-color: #d9e2ec;
-    /* light gray */
-    border: 2px solid #b0bec5;
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #627d98;
-    font-size: 20px;
-    letter-spacing: 2px;
-    flex-shrink: 0;
-}
-
 nav {
     background-color: darkblue;
     padding: 10px;
