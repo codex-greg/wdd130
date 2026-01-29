@@ -1,16 +1,21 @@
-:root {
-    --body-font: Verdana, Geneva, Tahoma, sans-serif;
-    --heading-font: Verdana, Geneva, Tahoma, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+/* class selectos */
+.box {
+    margin: 1rem;
+    border: 1px solid rgb(0 0 0/ 10%);
+    padding: 1rem;
+    background-color: #ddd;
+    color: #000;
 }
 
 body {
     margin: 0;
+    font-size: 16px;
     font-family: var(--body-font);
     background-color: #f4f7f9;
     color: #333;
@@ -39,13 +44,12 @@ nav {
 nav a {
     color: white;
     display: block;
-    padding: 20px;
-    text-decoration: none;
-    transition: color 0.25s, font-weight 0.25s;
+    padding: 10px;
 }
 
 h1 {
-    color: darkblue
+    color: darkblue;
+    padding: .5rem;
 }
 
 main img {
@@ -54,10 +58,13 @@ main img {
     border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
+    float: right;
+    margin: 0 0 1rem 1rem;
 }
 
 p {
     padding: 0;
+    margin: 1rem;
 }
 
 main {
@@ -65,14 +72,16 @@ main {
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgb(0 0 0 / 0.2);
-    /*1*/
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
+    width: 20em;
     text-align: center;
+    position: relative;
+}
+
+aside h2 {
+    position: absolute;
+    top: 20px;
+    left: 75px;
+    color: #ddd;
 }
 
 aside img {
@@ -84,4 +93,8 @@ footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+.indent {
+    padding: 2rem;
 }
