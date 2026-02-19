@@ -78,97 +78,123 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Call to Action */
-.cta {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: #006699;
-    color: #fff;
+/* Hero Banner */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background: url('../images/rafting53_600.jpg') no-repeat center center / cover;
 }
 
-.cta h2 {
+.hero img {
+    display: none;
+}
+
+/* hide inline image if using background */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
-.cta p {
-    margin-bottom: 1.5rem;
-}
-
-.cta .btn {
+.hero-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
     background: #ff6600;
     color: #fff;
-    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.cta .btn:hover {
+.hero-text .btn:hover {
     background: #e65c00;
 }
 
-/* Trip Grid */
-.trip-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 3rem;
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 4rem 2rem;
     background: #f9f9f9;
 }
 
-.trip {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.feature {
     text-align: center;
+    flex: 1;
 }
 
-.trip img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.feature img {
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
-.trip h3 {
-    margin: 1rem 0;
+.feature h3 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
     color: #006699;
 }
 
-.trip p {
-    padding: 0 1rem 1.5rem;
-}
-
-/* Trips Table */
-.trip-table {
-    padding: 3rem;
-    background: #fff;
-}
-
-.trip-table h2 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.trip-table table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.trip-table th,
-.trip-table td {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    text-align: center;
-}
-
-.trip-table th {
-    background: #006699;
+/* Scenic Section */
+.scenic {
+    background: url('../images/Rodriguez-Rizal.jpg') no-repeat center center / cover;
+    min-height: 70vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
     color: #fff;
 }
 
-.trip-table tr:nth-child(even) {
-    background: #f4f4f4;
+.scenic::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.scenic-text {
+    position: relative;
+    z-index: 2;
+    max-width: 400px;
+    background: rgba(0, 100, 0, 0.6);
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.scenic-text h2 {
+    margin-bottom: 1rem;
+}
+
+.scenic-text .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #d2b48c;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.scenic-text .btn:hover {
+    background: #c0a070;
 }
 
 /* Footer */
@@ -179,16 +205,18 @@ footer {
     padding: 1.5rem;
 }
 
-footer p {
-    margin: 0.5rem 0;
+footer nav a {
+    color: #ff6600;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
 }
 
 footer .social-icons a {
     color: #ff6600;
     margin: 0 0.5rem;
     text-decoration: none;
-}
-
-footer .social-icons a:hover {
-    text-decoration: underline;
 }
