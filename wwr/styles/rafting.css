@@ -1,19 +1,4 @@
-:root {
-    --primary-color: #588288;
-    /* forest green*/
-    --secondary-color: #f4a261;
-    /* warm sand*/
-    --accent1-color: #264653;
-    /* dark slate blue*/
-    --accent2-color: #e9c46a;
-    /* light golden yellow*/
-    --accent3-color: #fff;
-    /* white*/
-    --heading-font: "Times New Roman", "Georgia", serif;
-    --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* Reset and base styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -23,150 +8,187 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
 }
 
-/* Header and navigation */
-.site-header {
+/* Header */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    background-color: #f5f5f5;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    /* semi-transparent overlay */
+    position: fixed;
+    /* stays visible when scrolling */
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    /* ensures it sits above hero background */
+}
+
+* Logo + Site Name */ .logo {
+    display: flex;
+    align-items: center;
 }
 
 .logo img {
-    height: 60px;
+    height: 50px;
+    margin-right: 10px;
 }
 
-.main-nav .nav-list {
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Navigation */
+nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 2rem;
 }
 
-.main-nav .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Company info + map + contact form side by side */
-#company-info,
-#contact-form {
-    flex: 1;
-    min-width: 300px;
-}
-
-#company-info {
-    padding: 20px;
-}
-
-#company-info h1 {
-    margin-bottom: 10px;
-}
-
-#company-info p {
-    margin-bottom: 5px;
-}
-
-.map iframe {
-    width: 100%;
-    height: 300px;
-    border: none;
-}
-
-/* Two-column layout */
-main {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-}
-
-/* Contact form styling */
-#contact-form {
-    background-color: #fafafa;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-#contact-form form {
-    display: flex;
-    flex-direction: column;
-}
-
-#contact-form label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-#contact-form input,
-#contact-form textarea {
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contact-form button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #0077cc;
+nav ul li a {
     color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-#contact-form button:hover {
-    background-color: #005fa3;
+nav ul li a:hover {
+    color: #ff6600;
+    /* highlight color */
 }
 
-/* Employee profiles */
-#employees {
-    width: 100%;
-    padding: 20px;
-    background-color: #f9f9f9;
+header img {
+    height: 50px;
 }
 
-#employees h2 {
-    margin-bottom: 20px;
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Call to Action */
+.cta {
     text-align: center;
+    padding: 3rem 1rem;
+    background: #006699;
+    color: #fff;
 }
 
-#employees .employees {
-    display: inline-block;
-    width: 30%;
-    text-align: center;
-    margin: 0 1%;
-    background-color: #fff;
-    border: 1px solid #ddd;
+.cta h2 {
+    margin-bottom: 1rem;
+}
+
+.cta p {
+    margin-bottom: 1.5rem;
+}
+
+.cta .btn {
+    background: #ff6600;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta .btn:hover {
+    background: #e65c00;
+}
+
+/* Trip Grid */
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 3rem;
+    background: #f9f9f9;
+}
+
+.trip {
+    background: #fff;
     border-radius: 8px;
-    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
 }
 
-#employees img {
-    width: 100px;
-    height: 100px;
-    background-color: #eee;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.trip img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.trip h3 {
+    margin: 1rem 0;
+    color: #006699;
+}
+
+.trip p {
+    padding: 0 1rem 1.5rem;
+}
+
+/* Trips Table */
+.trip-table {
+    padding: 3rem;
+    background: #fff;
+}
+
+.trip-table h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.trip-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.trip-table th,
+.trip-table td {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+}
+
+.trip-table th {
+    background: #006699;
+    color: #fff;
+}
+
+.trip-table tr:nth-child(even) {
+    background: #f4f4f4;
 }
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: #333;
     color: #fff;
     text-align: center;
-    padding: 15px;
+    padding: 1.5rem;
 }
 
-footer .socialmedia {
-    margin-top: 10px;
+footer p {
+    margin: 0.5rem 0;
 }
 
-footer .socialmedia a img {
-    width: 30px;
-    margin: 0 5px;
+footer .social-icons a {
+    color: #ff6600;
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    text-decoration: underline;
 }
